@@ -2,6 +2,8 @@
 
 This small javascript library adds support for changing language of [OpenMapTiles](https://openmaptiles.com/)-based maps displayed with [Mapbox GL JS](https://www.mapbox.com/mapbox-gl-js/api/).
 
+![Demo](https://user-images.githubusercontent.com/707817/34866752-e7db6c4e-f77d-11e7-9f47-280683a1ceff.gif)
+
 ## Usage
 
 Place this code ***AFTER*** loading mapbox-gl-js:
