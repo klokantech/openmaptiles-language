@@ -107,7 +107,7 @@
       ],
       "decorators": [
         {
-          "layout.text-field": "{name:latin}" + (noAlt ? "" : "\n{name:nonlatin}"),
+          "layout.text-field": isNonlatin ? ("{name:nonlatin}" + (noAlt ? "" : "\n{name:latin}")) : ("{name:latin}" + (noAlt ? "" : "\n{name:nonlatin}")),
           "filter-all-part": [
             "!has",
             "name:" + language
