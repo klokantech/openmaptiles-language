@@ -53,12 +53,14 @@
     }
   };
 
+  var langaugeEnabled = true;
+
   var setStyleMutex = false;
   var origSetStyle = mapboxgl.Map.prototype.setStyle;
   mapboxgl.Map.prototype.setStyle = function() {
     origSetStyle.apply(this, arguments);
 
-    if (!setStyleMutex) {
+    if (langaugeEnabled && !setStyleMutex) {
       if (this.styleUndecorated) {
         this.styleUndecorated = undefined;
       }
@@ -71,6 +73,10 @@
         }
       }.bind(this));
     }
+  };
+
+  mapboxgl.Map.prototype.setLanguageEnabled = function(enable) {
+    langaugeEnabled = enable;
   };
 
   mapboxgl.Map.prototype.setLanguage = function(language, noAlt) {
