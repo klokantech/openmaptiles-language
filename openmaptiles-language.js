@@ -53,14 +53,14 @@
     }
   };
 
-  var langaugeEnabled = true;
+  var languageEnabled = true;
 
   var setStyleMutex = false;
   var origSetStyle = mapboxgl.Map.prototype.setStyle;
   mapboxgl.Map.prototype.setStyle = function() {
     origSetStyle.apply(this, arguments);
 
-    if (langaugeEnabled && !setStyleMutex) {
+    if (languageEnabled && !setStyleMutex) {
       if (this.styleUndecorated) {
         this.styleUndecorated = undefined;
       }
@@ -76,7 +76,7 @@
   };
 
   mapboxgl.Map.prototype.setLanguageEnabled = function(enable) {
-    langaugeEnabled = enable;
+    languageEnabled = enable;
   };
 
   mapboxgl.Map.prototype.setLanguage = function(language, noAlt) {
@@ -94,7 +94,7 @@
     }
 
     var isNonlatin = [
-      'ar', 'hy', 'be', 'bg', 'zh', 'ka', 'el', 'he',
+      'am', 'ar', 'hy', 'be', 'bg', 'zh', 'ka', 'el', 'he',
       'ja', 'ja_kana', 'kn', 'kk', 'ko', 'mk', 'ru', 'sr',
       'th', 'uk'
     ].indexOf(language) >= 0;
