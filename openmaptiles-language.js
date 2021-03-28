@@ -94,7 +94,7 @@
     }
 
     var isNonlatin = [
-      'ar', 'hy', 'be', 'bg', 'zh', 'ka', 'el', 'he',
+      'am', 'ar', 'hy', 'be', 'bg', 'zh', 'ka', 'el', 'he',
       'ja', 'ja_kana', 'kn', 'kk', 'ko', 'mk', 'ru', 'sr',
       'th', 'uk'
     ].indexOf(language) >= 0;
